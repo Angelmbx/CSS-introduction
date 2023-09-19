@@ -1,0 +1,52 @@
+.flex {
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.flex > div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+}
+/* si pones auto a todos les aplica el mismo peso. Si quieres variar 1fr, 2fr... */
+
+.grid > div{
+width: 50px;
+height: 50px;
+border: 1px solid black;
+}
+
+
+body{
+    display: grid;
+    grid-template-columns:  1fr 3fr;
+}
+
+header{
+    min-height: 50px;
+    background-color: red;
+    grid-column: 1/3;
+}
+aside{
+    min-height: 50px;
+    background-color: green;
+}
+main{
+    min-height: 50px;
+    background-color: blue;
+}
+footer{
+    grid-column: 1/3;
+    background-color: gray;
+    min-height: 50px;
+}
